@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ali Studios</title>
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0b'/%3E%3Cpath d='M32 8 12 54h11l3-8h12l3 8h11L32 8Zm0 18 4 12h-8l4-12Z' fill='%23ffc800'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#0b0b0b;--card:#161616;--line:#2a2a2a;--y:#ffc800;--t:#f2f2f2;--m:#a3a3a3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{width:min(960px,100% - 32px);margin-inline:auto}
+header{border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.08em;color:var(--t);text-decoration:none}
+.brand svg{width:34px;height:34px}.brand b{color:var(--y)}
+.right{display:flex;align-items:center;gap:18px}
+.right a{color:var(--m);text-decoration:none;font-weight:600;font-size:15px}.right a:hover{color:var(--y)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--m);font:700 13px system-ui,sans-serif;padding:6px 12px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--y);color:#111}
+.hero{padding:clamp(56px,11vw,110px) 0 clamp(32px,6vw,56px)}
+h1{font-size:clamp(38px,8vw,72px);line-height:1.05;font-weight:900}
+h1 b{color:var(--y)}
+.hero p{margin-top:18px;max-width:520px;color:var(--m);font-size:clamp(16px,2.4vw,19px)}
+h2{font-size:26px;font-weight:800;margin-bottom:18px}
+h2:after{content:"";display:block;width:40px;height:4px;background:var(--y);border-radius:2px;margin-top:8px}
+section{padding:36px 0}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.game{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s,transform .2s}
+.game:hover{border-color:var(--y);transform:translateY(-3px)}
+.game h3{font-size:20px}
+.game p{color:var(--m);font-size:15px;flex:1}
+.btn{margin-top:8px;border:0;cursor:pointer;background:var(--y);color:#111;font:800 16px system-ui,sans-serif;padding:12px;border-radius:10px;transition:filter .15s}
+.btn:hover{filter:brightness(1.1)}
+.about p{color:var(--m);max-width:620px;margin-bottom:10px}
+.about b{color:var(--t)}
+footer{margin-top:24px;padding:26px 0;border-top:1px solid var(--line);color:var(--m);font-size:14px}
+footer b{color:var(--y)}
+.player{position:fixed;inset:0;z-index:50;background:#000;display:none;flex-direction:column}
+.player.open{display:flex}
+.bar{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar h4{flex:1;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar button{background:var(--card);color:var(--t);border:1px solid var(--line);border-radius:8px;font:700 14px system-ui,sans-serif;padding:8px 14px;cursor:pointer}
+.bar .x{background:var(--y);color:#111;border-color:var(--y)}
+.player iframe{flex:1;border:0;width:100%;background:#000}
